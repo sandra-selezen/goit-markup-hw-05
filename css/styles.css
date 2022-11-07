@@ -1,5 +1,6 @@
 :root {
     --accent-color: #2196F3;
+    --accent-opacity-color: rgba(33, 150, 243, 0.9);
     --primary-white-color: #FFFFFF;
     --title-color: #212121;
     --text-color: #757575;
@@ -557,6 +558,33 @@ img {
 .portfolio-link:focus {
     display: block;
     box-shadow: var(--portfolio-card-shadow);
+}
+
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-box:hover .portfolio-overlay {
+    transform: translatey(0);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+
+    color: var(--primary-white-color);
+    background-color: var(--accent-opacity-color);
+
+    transform: translatey(100%);
+    transition: transform 250ms ease;
 }
 
 .portfolio-content {
