@@ -166,6 +166,15 @@ img {
     color: var(--accent-color);
 }
 
+.current-page::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
 .header-email,
 .header-phone {
     display: flex;
