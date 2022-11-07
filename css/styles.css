@@ -534,7 +534,13 @@ img {
     background-color: var(--primary-white-color);
 }
 
-.portfolio-card:hover {
+/* .portfolio-card:hover {
+    box-shadow: var(--portfolio-card-shadow);
+} */
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    display: block;
     box-shadow: var(--portfolio-card-shadow);
 }
 
