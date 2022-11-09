@@ -641,7 +641,8 @@ img {
     cursor: pointer;
 
     transition: background-color var(--duration) var(--timing-function),
-    color var(--duration) var(--timing-function);
+    color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
 }
 
 .filter-buttons:hover,
