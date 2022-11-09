@@ -1,5 +1,6 @@
 :root {
     --accent-color: #2196F3;
+    --hover-hero-button: #188CE8;
     --accent-opacity-color: rgba(33, 150, 243, 0.9);
     --primary-white-color: #FFFFFF;
     --title-color: #212121;
@@ -28,6 +29,7 @@
     --backdrop-color: rgba(0, 0, 0, 0.2);
     --duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --close-button-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -352,11 +354,15 @@ img {
     cursor: pointer;
     
     background-color: var(--accent-color);
+
+    transition: box-shadow var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
 }
 
 .hero-button:hover,
 .hero-button:focus {
     box-shadow: var(--hero--button-shadow);
+    background-color: var(--hover-hero-button);
 }
 
 /* Стилі модального вікна */
@@ -394,6 +400,34 @@ img {
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--duration) var(--timing-function);
+}
+
+.button-close {
+    position: absolute;
+    display: flex;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+
+    fill: var(--primary-black-color);
+    border-radius: 50%;
+    background: var(--primary-white-color);
+    border: 1px solid var(--close-button-color);
+    cursor: pointer;
+
+    transition: fill var(--duration) var(--timing-function);
+}
+
+.button-close:hover,
+.button-close:focus {
+    fill: var(--accent-color);
+}
+
+.icon-close {
+    fill: inherit;
 }
 
 /* Студія стилі */
@@ -660,7 +694,8 @@ img {
     transition: transform var(--duration) var(--timing-function);
 }
 
-.portfolio-link:hover .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
     transform: translatey(0);
 }
 
