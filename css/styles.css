@@ -477,6 +477,7 @@ img {
 
 .img-box {
     position: relative;
+    z-index: -1;
 }
 
 .label {
